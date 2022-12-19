@@ -17,10 +17,10 @@ function App() {
       return () => clearInterval(interval);
     }, []);
   
-    
+  
   
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},gb&appid=6ad02853c30fd4d8a2edfcf965c7c8d1&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},gb&appid=${apiKey}&units=metric`;
 
   const searchLoaction = (event) => {
     if (event.key === "Enter") {
