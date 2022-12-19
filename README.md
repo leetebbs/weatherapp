@@ -7,12 +7,13 @@ This is a React project that displays current weather information for a selected
 Display current temperature, humidity, and wind speed
 Display a visual representation of the current weather conditions (e.g. sunny, cloudy, rainy)
 Allow users to search for the weather in a specific location
+
 Technologies
+
 React: used for building the user interface
 axios: used for making HTTP requests to the OpenWeatherMap API
-useState and useEffect: React hooks used for managing state and implementing side effects in the app
-Getting Started
-To run this project locally, follow these steps:
+useState and useEffect: React hooks used for managing state and implementing side effects in the app.
+
 
 ##  Clone the repository:
 
