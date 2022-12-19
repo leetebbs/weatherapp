@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import sunset from './assets/sunset.jpg'
+
 
 function App() {
+  
   const apiKey = process.env.REACT_APP_ACCESS_KEY;
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTime(new Date().toLocaleTimeString());
+      }, 1000);
+      return () => clearInterval(interval);
+    }, []);
+  
+    
+  
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},gb&appid=6ad02853c30fd4d8a2edfcf965c7c8d1&units=metric`;
 
@@ -19,7 +33,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" >
       <div className="search">
         <input
           value={location}
@@ -40,6 +54,7 @@ function App() {
           <div className="description">
             {data.weather ? <p>{data.weather[0].description}</p> : null}
           </div>
+          {data.weather ? <div className="time">{time}</div> : null}
         </div>
         {data.name != undefined && (
           <div className="bottom">
