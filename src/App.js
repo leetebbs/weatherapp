@@ -9,6 +9,7 @@ function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [timeOfDay, setTimeOfDay] = useState('');
   
     useEffect(() => {
       const interval = setInterval(() => {
@@ -17,7 +18,25 @@ function App() {
       return () => clearInterval(interval);
     }, []);
   
+    useEffect(() => {
+      const interval = setInterval(() => {
+        const currentTime = new Date();
+        const hours = currentTime.getHours();
   
+        if (hours >= 6 && hours < 12) {
+          setTimeOfDay('morning');
+        } else if (hours >= 12 && hours < 18) {
+          setTimeOfDay('afternoon');
+        } else if (hours >= 18 && hours < 21) {
+          setTimeOfDay('evening');
+        } else {
+          setTimeOfDay('night');
+        }
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
+
   
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location},gb&appid=${apiKey}&units=metric`;
@@ -33,7 +52,8 @@ function App() {
   };
 
   return (
-    <div className="App" >
+     <div className={`App ${timeOfDay}`}>
+        <p className="test fun">{timeOfDay}</p>
       <div className="search">
         <input
           value={location}
@@ -77,7 +97,8 @@ function App() {
           </div>
         )}
       </div>
-    </div>
+     
+   </div>
   );
 }
 

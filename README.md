@@ -5,8 +5,8 @@ This is a React project that displays current weather information for a selected
 ##  Features
 
 Display current temperature, humidity, and wind speed
-Display a visual representation of the current weather conditions (e.g. sunny, cloudy, rainy)
-Allow users to search for the weather in a specific location
+Background changes with the time of day.
+Allow users to search for the weather in a specific location in the uk.
 
 Technologies
 
