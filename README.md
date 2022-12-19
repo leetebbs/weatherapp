@@ -14,7 +14,7 @@ useState and useEffect: React hooks used for managing state and implementing sid
 Getting Started
 To run this project locally, follow these steps:
 
-##C  lone the repository:
+##  Clone the repository:
 
 git clone https://github.com/leetebbs/weather-app.git
 Navigate to the project directory:
@@ -25,9 +25,11 @@ Start the development server:
 npm start
 The app will now be running at http://localhost:3000/.
 
-API Key
+##  API Key
+
 This project uses the OpenWeatherMap API to retrieve weather data. In order to use the API, you will need to sign up for a free API key at https://home.openweathermap.org/users/sign_up.
 
 
-###Contributing
+##  Contributing
+
 If you'd like to contribute to this project, please fork the repository and make your changes in a separate branch. Once you're ready to submit your changes, open a pull request and describe the changes you made.
