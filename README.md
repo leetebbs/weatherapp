@@ -1,7 +1,9 @@
-#Weather App
+##  Weather App
+
 This is a React project that displays current weather information for a selected location. It uses the OpenWeatherMap API to retrieve data and displays it in an easy-to-read format.
 
-##Features
+##  Features
+
 Display current temperature, humidity, and wind speed
 Display a visual representation of the current weather conditions (e.g. sunny, cloudy, rainy)
 Allow users to search for the weather in a specific location
@@ -12,8 +14,9 @@ useState and useEffect: React hooks used for managing state and implementing sid
 Getting Started
 To run this project locally, follow these steps:
 
-##Clone the repository:
-git clone https://github.com/your-username/weather-app.git
+##C  lone the repository:
+
+git clone https://github.com/leetebbs/weather-app.git
 Navigate to the project directory:
 cd weather-app
 Install the dependencies:
